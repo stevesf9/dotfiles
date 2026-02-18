@@ -1,0 +1,216 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="nvim"
+
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:$HOME/go/bin:/usr/local/bin:$PATH
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+. "$HOME/.cargo/env"
+export PATH=$PATH:/usr/local/go/bin
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="fino-time"
+# ZSH_THEME="gnzh"
+# ZSH_THEME="ys"
+# ZSH_THEME="frisk"
+ZSH_THEME="minimal"
+
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# set colors for LS_COLORS
+eval `dircolors .dircolors`
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(aliases git golang themes )
+plugins+=(zsh-vi-mode )
+plugins+=(zsh-fzf-history-search )
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+#
+# Add this to ~/.zshrc or ~/.bashrc
+#loc() {
+#    if [[ $# -eq 0 ]]; then
+#        echo "Usage: loc <pattern1> [pattern2 ...]"
+#        return 1
+#    fi
+#
+#    local regexes=()
+#
+#    for pattern in "$@"; do
+#       # Escape literal dots
+#       pattern="${pattern//\./\\.}"
+#
+#       # * -> .*
+#       pattern="${pattern//\*/.*}"
+#
+#       # ? -> .
+#       pattern="${pattern//\?/\.}"
+#
+#       regexes+=("$pattern")
+#    done
+#
+#    # Join all patterns with |
+#    local combined_regex
+#    combined_regex=$(IFS='|'; echo "${regexes[*]}")
+#
+#    # Pass all patterns to locate at once
+#    command locate -r "$combined_regex"
+#}
+
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+ 
+# some more ls aliases
+# alias ll='ls -alF'
+# alias la='ls -a'
+# alias l='ls -CF'
+
+alias ll='eza -al --group-directories-first '
+alias la='eza --icons -a --group-directories-first'
+#alias la='exa -a --group-directories-first'
+alias l='eza --icons --group-directories-first'
+#alias l='exa --group-directories-first'
+alias lf='fx'
+alias cpul='ps -e -o pid,ppid,comm,%mem,rss,%cpu --sort=-%cpu | head -10'
+alias bao='baobab'
+alias python='/usr/bin/python3'
+# alias btop='bpytop'
+alias mdv='inlyne --theme dark'
+# alias bat=batca
+alias bp='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=ubpm page.codeberg.lazyt'
+alias db='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/dbeaver io.dbeaver.DBeaverCommunity'
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+} 
+
+#
+# Only changing the escape key to `jk` in insert mode, we still
+# keep using the default keybindings `^[` in other modes
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+export KEYTIMEOUT=1
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Remove duplicates from history
+setopt HIST_IGNORE_DUPS        # Don't record duplicate of the previous entry
+setopt HIST_IGNORE_ALL_DUPS    # Delete old recorded entry if new entry is a duplicate
+setopt HIST_FIND_NO_DUPS       # Don't display duplicates when searching
+setopt HIST_SAVE_NO_DUPS       # Don't write duplicates to history file
+
+. ~/.luaver/luaver
+
+eval "$(zoxide init zsh)"
+export MODULAR_HOME="/home/steve/.modular"
+export PATH="/home/steve/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+source /home/steve/.config/broot/launcher/bash/br
+
+[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
+export XAUTHORITY=$HOME/.Xauthority
+
+# Only run fastfetch in interactive terminal
+if [[ $- == *i* ]]; then
+  fastfetch
+fi
+
