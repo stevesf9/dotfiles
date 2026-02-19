@@ -7,7 +7,6 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 
-127.0.0.1	xpslaptop
 192.168.68.62	ryzen5800
 192.168.68.69   opiw
 192.168.68.52   dietpi
