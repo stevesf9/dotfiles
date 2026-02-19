@@ -194,8 +194,6 @@ setopt HIST_IGNORE_ALL_DUPS    # Delete old recorded entry if new entry is a dup
 setopt HIST_FIND_NO_DUPS       # Don't display duplicates when searching
 setopt HIST_SAVE_NO_DUPS       # Don't write duplicates to history file
 
-. ~/.luaver/luaver
-
 eval "$(zoxide init zsh)"
 export MODULAR_HOME="/home/steve/.modular"
 export PATH="/home/steve/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
