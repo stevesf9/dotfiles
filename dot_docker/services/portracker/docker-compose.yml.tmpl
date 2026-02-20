@@ -2,6 +2,7 @@ services:
   portracker:
     image: mostafawahied/portracker:latest
     container_name: portracker
+    pull_policy: never  # <--- force use of the cached image
     restart: unless-stopped
     # If on Pi 5/4, force ARM64 to resolve manifest issues
     platform: linux/arm64 
