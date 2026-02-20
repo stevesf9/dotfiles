@@ -1,15 +1,21 @@
-version: "3.8"
 services:
   portracker:
     image: mostafawahied/portracker:latest
     container_name: portracker
     restart: unless-stopped
-    # Use host network to see system-level ports (like SSH, native scripts)
-    network_mode: "host"
+    # If on Pi 5/4, force ARM64 to resolve manifest issues
+    platform: linux/arm64 
+    pid: "host"
+    cap_add:
+      - SYS_PTRACE
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - {{ .chezmoi.homeDir }}/docker/services/portracker/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - "4999:4999"
     environment:
       - PORT=4999
       - DATABASE_PATH=/data/portracker.db
-    volumes:
-      - {{ .chezmoi.homeDir }}/docker/services/portracker/data:/data
-      # Mount the Docker socket as Read-Only for safety
-      - /var/run/docker.sock:/var/run/docker.sock:ro
