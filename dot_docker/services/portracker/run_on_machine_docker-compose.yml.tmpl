@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  portracker:
+    image: mostafawahied/portracker:latest
+    container_name: portracker
+    restart: unless-stopped
+    # Use host network to see system-level ports (like SSH, native scripts)
+    network_mode: "host"
+    environment:
+      - PORT=4999
+      - DATABASE_PATH=/data/portracker.db
+    volumes:
+      - {{ .chezmoi.homeDir }}/docker/services/portracker/data:/data
+      # Mount the Docker socket as Read-Only for safety
+      - /var/run/docker.sock:/var/run/docker.sock:ro
