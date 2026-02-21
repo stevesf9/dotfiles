@@ -1,11 +1,9 @@
 services:
   portracker:
-    image: mostafawahied/portracker:latest
+    image: mostafawahied/portracker:v1.3.0
     container_name: portracker
-    pull_policy: never  # <--- force use of the cached image
+    platform: linux/arm64
     restart: unless-stopped
-    # If on Pi 5/4, force ARM64 to resolve manifest issues
-    platform: linux/arm64 
     pid: "host"
     cap_add:
       - SYS_PTRACE
@@ -19,4 +17,6 @@ services:
       - "4999:4999"
     environment:
       - PORT=4999
-      - DATABASE_PATH=/data/portracker.db
+      - CORS_ORIGIN=*
+      - ENABLE_AUTH=false
+      - HOST_OVERRIDE=http://{{ .lan_ip }}:4999

@@ -1,0 +1,4 @@
+{{- $ip := output "hostname" "-I" | trim | splitList " " | first -}}
+[data]
+    lan_ip = {{ $ip | quote }}
+    hostname = {{ .chezmoi.hostname | quote }}
