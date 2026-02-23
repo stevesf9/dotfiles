@@ -2,7 +2,7 @@ services:
   portracker:
     image: mostafawahied/portracker:latest
     container_name: portracker
-    platform: linux/arm64
+    platform: linux/{{ .chezmoi.arch }}
     restart: unless-stopped
     pid: "host"
     cap_add:
