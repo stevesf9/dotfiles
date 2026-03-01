@@ -159,6 +159,7 @@ alias la='eza --icons -a --group-directories-first'
 #alias la='exa -a --group-directories-first'
 alias l='eza --icons --group-directories-first'
 #alias l='exa --group-directories-first'
+alias ff='fastfetch'
 alias lf='fx'
 alias cpul='ps -e -o pid,ppid,comm,%mem,rss,%cpu --sort=-%cpu | head -10'
 alias bao='baobab'
@@ -208,7 +209,7 @@ source /home/steve/.config/broot/launcher/bash/br
 export XAUTHORITY=$HOME/.Xauthority
 
 # Only run fastfetch in interactive terminal
-if [[ $- == *i* ]]; then
-  fastfetch
-fi
+# if [[ $- == *i* ]]; then
+#  fastfetch
+# fi
 
