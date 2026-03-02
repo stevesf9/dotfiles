@@ -1,0 +1,54 @@
+
+baobab - alias bao - disk usage analyzer
+bat - cat files
+bp - alias for 'Universal Blood Pressure Manager' 
+btop - btop++ process viewer
+cat /proc/cpuinfo - cpu info
+cheat - displays cheatsheets
+clamscan - clamav antivirus scanner command line
+cpul - alias for ps -e -o pid,ppid,comm,%mem,rss,%cpu --sort=-%cpu | head -10
+cpu-x - system hardware info, run as sudo
+db - alias for DBeaver
+ddgr - duckduckgo search command line
+docker startup - docker run -w /root -it --rm alpine:latest sh -uelic 'apk add git nodejs neovim ripgrep build-base wget --update git clone https://github.com/NvChad/NvChad ~/.config/nvim/'
+dua - interactive command line disk space
+dust - disk tree
+dysk - partion information
+exa - alias ll,la,l - directory lister
+fastfetch - alias ff - displays system info
+free - hdd free space
+fx - alias lf - vim mode directory lister
+git merge error - git reset HEAD --hard - Use in ~/vimfiles/"plugin" when git merge error occurs during vim PlugUpdate
+grex - command line regex generator
+grub-customizer - change boot order
+hardinfo - gui hardware lister, also 'System Profiler and Benchmark'
+hdd clone - dd if=/dev/??? | pv -s ?G | sudo dd of=/dev/??? - clone drive to drive with status
+hdd mount - mount /dev/??? /media/??? -o uid=steve,gid=steve
+hwinfo - hardware lister, detailed and lona
+inlyne - alias mdv - markdown viewer
+installed packages - dpkg --list 'linux-image*' | grep ^ii
+juliaup - julia version manager
+libsql - rust version of sqlite3
+linux image remove - apt-get remove linux-image-VERSION
+lsblk -f /dev/sd?? - UUID information
+lscpu - list cpu info
+lshw - hardware lister
+mdcat - markdown cat
+ncdu - disk size structure
+nemo - file manager
+okular - pdf
+onefetch - git repository information
+pipx — Install and Run Python Applications in Isolated Environments
+procs - processes, vim like commands
+qdirstat - disk size structure
+qpdfview - pdf
+restic - command line backup tool
+scrcpy - control android phone plugged into usb port 
+sdk/sdkman - SDK manager for Java, Groovy, Scala, Kotlin,...
+sort command list - sort -t- -d -k1 -o command-list-sorted command-list
+speedtest-cli - network speed test 
+system-monitoring-center - system monitor
+system performance - sysbench cpu --cpu-max-prime=20000 --threads=4 --time=0 --events=10000 run
+uv - python project manager written in rust
+virt-manager - virtual machine manager
+yy - yazi - file manager
