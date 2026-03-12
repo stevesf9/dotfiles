@@ -35,6 +35,7 @@ lsblk -f /dev/sd?? - UUID information
 lscpu - list cpu info
 lshw - hardware lister
 mdcat - markdown cat
+miniserve - a CLI tool to serve files and dirs over HTTP
 ncdu - disk size structure
 nemo - file manager
 okular - pdf
