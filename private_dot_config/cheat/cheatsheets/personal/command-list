@@ -51,6 +51,7 @@ sort command list - sort -t- -d -k1 -o command-list-sorted command-list
 speedtest-cli - network speed test 
 system-monitoring-center - system monitor
 system performance - sysbench cpu --cpu-max-prime=20000 --threads=4 --time=0 --events=10000 run
+update-alternatives --get-selections - list app alternative links
 uv - python project manager written in rust
 virt-manager - virtual machine manager
 yy - yazi - file manager
