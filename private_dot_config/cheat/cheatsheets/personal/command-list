@@ -49,6 +49,7 @@ scrcpy - control android phone plugged into usb port
 sdk/sdkman - SDK manager for Java, Groovy, Scala, Kotlin,...
 sort command list - sort -t- -d -k1 -o command-list-sorted command-list
 speedtest-cli - network speed test 
+spf - superfile
 system-monitoring-center - system monitor
 system performance - sysbench cpu --cpu-max-prime=20000 --threads=4 --time=0 --events=10000 run
 update-alternatives --get-selections - list app alternative links
