@@ -29,6 +29,7 @@ inlyne - alias mdv - markdown viewer
 installed packages - dpkg --list 'linux-image*' | grep ^ii
 journalctl -p 3 -b - or journalctl -p 3 -b > file.txt - view or save system logs
 juliaup - julia version manager
+lazydocker - docker command line manager
 libsql - rust version of sqlite3
 linux image remove - apt-get remove linux-image-VERSION
 lsblk -f /dev/sd?? - UUID information
