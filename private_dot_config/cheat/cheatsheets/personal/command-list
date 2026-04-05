@@ -56,5 +56,6 @@ system performance - sysbench cpu --cpu-max-prime=20000 --threads=4 --time=0 --e
 toggle-server-laptop - for elitbook only, requires sudo
 update-alternatives --get-selections - list app alternative links
 uv - python project manager written in rust
+vcpkg - Windows c/c++ library package manager
 virt-manager - virtual machine manager
 yy - yazi - file manager
