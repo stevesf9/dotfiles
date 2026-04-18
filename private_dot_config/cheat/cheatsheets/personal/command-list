@@ -16,6 +16,7 @@ dust - disk tree
 dysk - partion information
 exa - alias ll,la,l - directory lister
 fastfetch - alias ff - displays system info
+feh - image/photo viewer
 free - hdd free space
 fx - alias lf - vim mode directory lister
 git merge error - git reset HEAD --hard - Use in ~/vimfiles/"plugin" when git merge error occurs during vim PlugUpdate
@@ -29,6 +30,7 @@ inlyne - alias mdv - markdown viewer
 installed packages - dpkg --list 'linux-image*' | grep ^ii
 journalctl -p 3 -b - or journalctl -p 3 -b > file.txt - view or save system logs
 juliaup - julia version manager
+kitty - terminal with built in image viewer for yazi
 lazydocker - docker command line manager
 libsql - rust version of sqlite3
 linux image remove - apt-get remove linux-image-VERSION
