@@ -163,7 +163,7 @@ alias cpul='ps -e -o pid,ppid,comm,%mem,rss,%cpu --sort=-%cpu | head -10'
 alias bao='baobab'
 alias du='pdu'
 alias python='/usr/bin/python3'
-alias uvm = uv run nvim
+alias uvm='uv run nvim'
 alias mdv='inlyne --theme dark'
 # alias bat=batca
 alias bp='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=ubpm page.codeberg.lazyt'
