@@ -16,9 +16,10 @@ dust - disk tree
 dysk - partion information
 exa - alias ll,la,l - directory lister
 fastfetch - alias ff - displays system info
+fclone - duplicate file finder
 feh - image/photo viewer
 free - hdd free space
-fx - alias lf - vim mode directory lister
+fx - vim mode directory lister
 git merge error - git reset HEAD --hard - Use in ~/vimfiles/"plugin" when git merge error occurs during vim PlugUpdate
 grex - command line regex generator
 grub-customizer - change boot order
@@ -32,6 +33,7 @@ journalctl -p 3 -b - or journalctl -p 3 -b > file.txt - view or save system logs
 juliaup - julia version manager
 kitty - terminal with built in image viewer for yazi
 lazydocker - docker command line manager
+lf - ranger like file manager written in go
 libsql - rust version of sqlite3
 linux image remove - apt-get remove linux-image-VERSION
 lsblk -f /dev/sd?? - UUID information
@@ -43,6 +45,7 @@ ncdu - disk size structure
 nemo - file manager
 okular - pdf
 onefetch - git repository information
+pdu - alias du - parallel-disk-usage, like dust but a little faster
 pipx — Install and Run Python Applications in Isolated Environments
 procs - processes, vim like commands
 qdirstat - disk size structure
