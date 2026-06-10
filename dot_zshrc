@@ -178,6 +178,14 @@ function yy() {
 	rm -f -- "$tmp"
 } 
 
+tg() {
+  if [[ "$1" == "-y" || "$1" == "--apply" ]]; then
+    topgrade
+  else
+    topgrade --dry-run
+  fi
+}
+
 #
 # Only changing the escape key to `jk` in insert mode, we still
 # keep using the default keybindings `^[` in other modes

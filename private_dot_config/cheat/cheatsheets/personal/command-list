@@ -6,6 +6,7 @@ btop - btop++ process viewer
 cat /proc/cpuinfo - cpu info
 cheat - displays cheatsheets
 clamscan - clamav antivirus scanner command line
+coreutils - Windows coreutils commands - coreutils --list
 cpul - alias for ps -e -o pid,ppid,comm,%mem,rss,%cpu --sort=-%cpu | head -10
 cpu-x - system hardware info, run as sudo
 db - alias for DBeaver
@@ -29,6 +30,7 @@ hdd mount - mount /dev/??? /media/??? -o uid=steve,gid=steve
 hwinfo - hardware lister, detailed and lona
 inlyne - alias mdv - markdown viewer
 installed packages - dpkg --list 'linux-image*' | grep ^ii
+isd-tui - systemd terminal UI 
 journalctl -p 3 -b - or journalctl -p 3 -b > file.txt - view or save system logs
 juliaup - julia version manager
 kitty - terminal with built in image viewer for yazi
@@ -45,6 +47,7 @@ ncdu - disk size structure
 nemo - file manager
 okular - pdf
 onefetch - git repository information
+ouch - multi-function archiver - ouch l, ouch d, ouch c
 pdu - alias du - parallel-disk-usage, like dust but a little faster
 pipx — Install and Run Python Applications in Isolated Environments
 procs - processes, vim like commands
@@ -59,6 +62,7 @@ spf - superfile
 system-monitoring-center - system monitor
 system performance - sysbench cpu --cpu-max-prime=20000 --threads=4 --time=0 --events=10000 run
 toggle-server-laptop - for elitbook only, requires sudo
+topgrade - alias tg for dry-run, alias tg -y or tg -apply - upgrade almost all apps/packages/etc
 update-alternatives --get-selections - list app alternative links
 uv - python project manager written in rust
 vcpkg - Windows c/c++ library package manager
